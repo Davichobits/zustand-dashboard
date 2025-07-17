@@ -7,8 +7,8 @@ interface BearsState {
   increaseBlackBears: (by: number)=> void;
 }
 
-export const useStore = create<BearsState>((set) => ({
-  blackBears: 0,
+export const useBearStore = create<BearsState>((set) => ({
+  blackBears: 10,
   polarBears: 5,
   pandaBears: 1,
   increaseBlackBears: ()=>set((state)=>({blackBears: state.blackBears + 1})),
